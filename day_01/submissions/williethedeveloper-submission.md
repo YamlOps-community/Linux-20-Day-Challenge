@@ -1,8 +1,8 @@
 ## Day 1: Getting Started With The Basics
 
 ### Participant Details
-__Name:__ Utibe Okon
-__Date and Time:__ 2025-04-22 17:44 GMT +1
+__Name:__ Williams Adaji-Agbane
+__Date and Time:__ 2025-04-24 11:06 GMT +1
 
 ### Task Completed:
 - Read Chapter 1
@@ -10,4 +10,4 @@ __Date and Time:__ 2025-04-22 17:44 GMT +1
 - Created files and directory using linux command lines
 
 ### Additional Notes
-[A basic file of how your daily submissions should look like]
+- I already have Ubuntu installed on Virtual Box, somI did not install Kali

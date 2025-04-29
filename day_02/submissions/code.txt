@@ -1,0 +1,75 @@
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+williams@williams-VirtualBox:~$ man sudo_root
+williams@williams-VirtualBox:~$ sudo -i
+[sudo] password for williams: 
+root@williams-VirtualBox:~# ls
+snap
+root@williams-VirtualBox:~# cd etc
+-bash: cd: etc: No such file or directory
+root@williams-VirtualBox:~# cat >hackingskills
+Hacking is a very vital skill these days
+Yeah!root@williams-VirtualBox:~# cat hackingskills
+Hacking is a very vital skill these days
+Yeah!root@williams-VirtualBox:~# cat >>hackingskills
+ Everyone should learn hackingroot@williams-VirtualBox:~# 
+logout
+williams@williams-VirtualBox:~$ cat hackingskills
+cat: hackingskills: No such file or directory
+williams@williams-VirtualBox:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+williams@williams-VirtualBox:~$ locate hackingskills
+Command 'locate' not found, but can be installed with:
+sudo apt install plocate
+williams@williams-VirtualBox:~$ cat >hackingskills
+Hacking is a very vital skill.williams@williams-VirtualBox:~$ cat hackingskills
+Hacking is a very vital skill.williams@williams-VirtualBox:~$ cat >>hackingskills
+Everyone should learn hacking!williams@williams-VirtualBox:~$ cat hackingskills
+Hacking is a very vital skill.Everyone should learn hacking!williams@williams-VirtualBox:~$ touch newfile
+williams@williams-VirtualBox:~$ ls
+Desktop  Documents  Downloads  hackingskills  Music  newfile  Pictures  Public  snap  Templates  Videos
+williams@williams-VirtualBox:~$ ls -l
+total 40
+drwxr-xr-x 2 williams williams 4096 Apr 21 11:04 Desktop
+drwxr-xr-x 2 williams williams 4096 Apr 21 11:04 Documents
+drwxr-xr-x 2 williams williams 4096 Apr 21 11:04 Downloads
+-rw-rw-r-- 1 williams williams   60 Apr 24 14:45 hackingskills
+drwxr-xr-x 2 williams williams 4096 Apr 21 11:04 Music
+-rw-rw-r-- 1 williams williams    0 Apr 24 14:47 newfile
+drwxr-xr-x 2 williams williams 4096 Apr 21 11:04 Pictures
+drwxr-xr-x 2 williams williams 4096 Apr 21 11:04 Public
+drwx------ 3 williams williams 4096 Apr 21 11:04 snap
+drwxr-xr-x 2 williams williams 4096 Apr 21 11:04 Templates
+drwxr-xr-x 2 williams williams 4096 Apr 21 11:04 Videos
+williams@williams-VirtualBox:~$ mkdir newdirectory
+williams@williams-VirtualBox:~$ cd newdirectory
+williams@williams-VirtualBox:~/newdirectory$ touch oldfile
+williams@williams-VirtualBox:~/newdirectory$ ls -l
+total 0
+-rw-rw-r-- 1 williams williams 0 Apr 24 14:48 oldfile
+williams@williams-VirtualBox:~/newdirectory$ rm oldfile
+williams@williams-VirtualBox:~/newdirectory$ ls -l
+total 0
+williams@williams-VirtualBox:~/newdirectory$ cd ..
+williams@williams-VirtualBox:~$ ls
+Desktop  Documents  Downloads  hackingskills  Music  newdirectory  newfile  Pictures  Public  snap  Templates  Videos
+williams@williams-VirtualBox:~$ touch oldfile
+williams@williams-VirtualBox:~$ cp oldfile /root/newdirecttory/newfile
+cp: failed to access '/root/newdirecttory/newfile': Permission denied
+williams@williams-VirtualBox:~$ sudo -i
+root@williams-VirtualBox:~# cp cp oldfile /root/newdirectory/newfile
+cp: target '/root/newdirectory/newfile' is not a directory
+root@williams-VirtualBox:~# ls
+hackingskills  snap
+root@williams-VirtualBox:~# mkdri newdirectory
+Command 'mkdri' not found, did you mean:
+  command 'mkdir' from deb coreutils (8.32-4.1ubuntu1.2)
+Try: apt install <deb name>
+root@williams-VirtualBox:~# mkdir newdirectory
+root@williams-VirtualBox:~# touch oldfile
+root@williams-VirtualBox:~# cp oldfile /root/newdirectory/newfile
+root@williams-VirtualBox:~# cd newdirectory
+root@williams-VirtualBox:~/newdirectory# ls
+newfile
+

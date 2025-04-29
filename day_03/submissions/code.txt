@@ -1,0 +1,225 @@
+williams@DESKTOP-G44B5VV:~/minima$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.26.24.167  netmask 255.255.240.0  broadcast 172.26.31.255
+        inet6 fe80::215:5dff:fe33:bd7c  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:33:bd:7c  txqueuelen 1000  (Ethernet)
+        RX packets 128  bytes 101475 (101.4 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 119  bytes 21346 (21.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 928  bytes 12716916 (12.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 928  bytes 12716916 (12.7 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+williams@DESKTOP-G44B5VV:~/minima$ dhclient ech0
+Command 'dhclient' not found, but can be installed with:
+sudo apt install isc-dhcp-client       # version 4.4.3-P1-4ubuntu1, or
+sudo apt install isc-dhcp-client-ddns  # version 4.4.3-P1-4ubuntu1
+williams@DESKTOP-G44B5VV:~/minima$ udo apt install isc-dhcp-client       # version 4.4.3-P1-4ubuntu1
+Command 'udo' not found, but can be installed with:
+sudo apt install udo
+williams@DESKTOP-G44B5VV:~/minima$ sudo apt install isc-dhcp-client       # version 4.4.3-P1-4ubuntu1
+[sudo] password for williams: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  isc-dhcp-common
+Suggested packages:
+  avahi-autoipd isc-dhcp-client-ddns
+The following NEW packages will be installed:
+  isc-dhcp-client isc-dhcp-common
+0 upgraded, 2 newly installed, 0 to remove and 23 not upgraded.
+Need to get 375 kB of archives.
+After this operation, 1011 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu noble/universe amd64 isc-dhcp-client amd64 4.4.3-P1-4ubuntu2 [329 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble/universe amd64 isc-dhcp-common amd64 4.4.3-P1-4ubuntu2 [45.8 kB]
+Fetched 375 kB in 2s (205 kB/s)            
+Selecting previously unselected package isc-dhcp-client.
+(Reading database ... 40935 files and directories currently installed.)
+Preparing to unpack .../isc-dhcp-client_4.4.3-P1-4ubuntu2_amd64.deb ...
+Unpacking isc-dhcp-client (4.4.3-P1-4ubuntu2) ...
+Selecting previously unselected package isc-dhcp-common.
+Preparing to unpack .../isc-dhcp-common_4.4.3-P1-4ubuntu2_amd64.deb ...
+Unpacking isc-dhcp-common (4.4.3-P1-4ubuntu2) ...
+Setting up isc-dhcp-client (4.4.3-P1-4ubuntu2) ...
+Setting up isc-dhcp-common (4.4.3-P1-4ubuntu2) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+williams@DESKTOP-G44B5VV:~/minima$ iwconfig
+lo        no wireless extensions.
+
+eth0      no wireless extensions.
+
+williams@DESKTOP-G44B5VV:~/minima$ dhclient eth0
+RTNETLINK answers: Operation not permitted
+mkdir: cannot create directory '/run/network': Permission denied
+mkdir: cannot create directory '/run/systemd/resolve/netif': Permission denied
+chown: cannot access '/run/systemd/resolve/netif': No such file or directory
+williams@DESKTOP-G44B5VV:~/minima$ sudo -i
+root@DESKTOP-G44B5VV:~# dhclient eth0
+^C
+root@DESKTOP-G44B5VV:~# dig hackers-arise.com ns
+Command 'dig' not found, but can be installed with:
+apt install bind9-dnsutils
+root@DESKTOP-G44B5VV:~# apt install bind9-dnutils
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package bind9-dnutils
+root@DESKTOP-G44B5VV:~# apt install bind9-dnsutils
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  bind9-host bind9-libs liblmdb0 libmaxminddb0 libuv1t64
+Suggested packages:
+  mmdb-bin
+The following NEW packages will be installed:
+  bind9-dnsutils bind9-host bind9-libs liblmdb0 libmaxminddb0 libuv1t64
+0 upgraded, 6 newly installed, 0 to remove and 23 not upgraded.
+Need to get 1629 kB of archives.
+After this operation, 4652 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libuv1t64 amd64 1.48.0-1.1build1 [97.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 liblmdb0 amd64 0.9.31-1build1 [48.1 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libmaxminddb0 amd64 1.9.1-1build1 [24.4 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 bind9-libs amd64 1:9.18.30-0ubuntu0.24.04.2 [1253 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 bind9-host amd64 1:9.18.30-0ubuntu0.24.04.2 [50.4 kB]                          
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 bind9-dnsutils amd64 1:9.18.30-0ubuntu0.24.04.2 [155 kB]                       
+Fetched 1629 kB in 9s (175 kB/s)                                                                                                               
+Selecting previously unselected package libuv1t64:amd64.
+(Reading database ... 40967 files and directories currently installed.)
+Preparing to unpack .../0-libuv1t64_1.48.0-1.1build1_amd64.deb ...
+Unpacking libuv1t64:amd64 (1.48.0-1.1build1) ...
+Selecting previously unselected package liblmdb0:amd64.
+Preparing to unpack .../1-liblmdb0_0.9.31-1build1_amd64.deb ...
+Unpacking liblmdb0:amd64 (0.9.31-1build1) ...
+Selecting previously unselected package libmaxminddb0:amd64.
+Preparing to unpack .../2-libmaxminddb0_1.9.1-1build1_amd64.deb ...
+Unpacking libmaxminddb0:amd64 (1.9.1-1build1) ...
+Selecting previously unselected package bind9-libs:amd64.
+Preparing to unpack .../3-bind9-libs_1%3a9.18.30-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking bind9-libs:amd64 (1:9.18.30-0ubuntu0.24.04.2) ...
+Selecting previously unselected package bind9-host.
+Preparing to unpack .../4-bind9-host_1%3a9.18.30-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking bind9-host (1:9.18.30-0ubuntu0.24.04.2) ...
+Selecting previously unselected package bind9-dnsutils.
+Preparing to unpack .../5-bind9-dnsutils_1%3a9.18.30-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking bind9-dnsutils (1:9.18.30-0ubuntu0.24.04.2) ...
+Setting up liblmdb0:amd64 (0.9.31-1build1) ...
+Setting up libmaxminddb0:amd64 (1.9.1-1build1) ...
+Setting up libuv1t64:amd64 (1.48.0-1.1build1) ...
+Setting up bind9-libs:amd64 (1:9.18.30-0ubuntu0.24.04.2) ...
+Setting up bind9-host (1:9.18.30-0ubuntu0.24.04.2) ...
+Setting up bind9-dnsutils (1:9.18.30-0ubuntu0.24.04.2) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+root@DESKTOP-G44B5VV:~# dig hackers-arise.com ns
+
+; <<>> DiG 9.18.30-0ubuntu0.24.04.2-Ubuntu <<>> hackers-arise.com ns
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 48014
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;hackers-arise.com.             IN      NS
+
+;; ANSWER SECTION:
+hackers-arise.com.      21600   IN      NS      ns7.wixdns.net.
+hackers-arise.com.      21600   IN      NS      ns6.wixdns.net.
+
+;; Query time: 387 msec
+;; SERVER: 10.255.255.254#53(10.255.255.254) (UDP)
+;; WHEN: Fri Apr 25 13:23:18 WAT 2025
+;; MSG SIZE  rcvd: 81
+
+root@DESKTOP-G44B5VV:~# dig captainmarketingltd.com ns
+
+; <<>> DiG 9.18.30-0ubuntu0.24.04.2-Ubuntu <<>> captainmarketingltd.com ns
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 32783
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1280
+;; QUESTION SECTION:
+;captainmarketingltd.com.       IN      NS
+
+;; ANSWER SECTION:
+captainmarketingltd.com. 21600  IN      NS      dns1.namecheaphosting.com.
+captainmarketingltd.com. 21600  IN      NS      dns2.namecheaphosting.com.
+
+;; Query time: 230 msec
+;; SERVER: 10.255.255.254#53(10.255.255.254) (UDP)
+;; WHEN: Fri Apr 25 13:25:56 WAT 2025
+;; MSG SIZE  rcvd: 107
+
+root@DESKTOP-G44B5VV:~# dig captainmarketingltd.com mx
+
+; <<>> DiG 9.18.30-0ubuntu0.24.04.2-Ubuntu <<>> captainmarketingltd.com mx
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 23773
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1280
+;; QUESTION SECTION:
+;captainmarketingltd.com.       IN      MX
+
+;; ANSWER SECTION:
+captainmarketingltd.com. 14400  IN      MX      20 mx3-hosting.jellyfish.systems.
+captainmarketingltd.com. 14400  IN      MX      10 mx2-hosting.jellyfish.systems.
+captainmarketingltd.com. 14400  IN      MX      5 mx1-hosting.jellyfish.systems.
+
+;; Query time: 240 msec
+;; SERVER: 10.255.255.254#53(10.255.255.254) (UDP)
+;; WHEN: Fri Apr 25 13:27:12 WAT 2025
+;; MSG SIZE  rcvd: 153
+
+root@DESKTOP-G44B5VV:~# leafpad /etc/hosts
+Command 'leafpad' not found, but can be installed with:
+snap install leafpad
+root@DESKTOP-G44B5VV:~# snap install leafpad
+2025-04-25T13:29:48+01:00 INFO Waiting for automatic snapd restart...
+leafpad 0.8.18.1 from Ken VanDine✪ installed
+root@DESKTOP-G44B5VV:~# leafpad /etc/hosts
+update.go:85: cannot change mount namespace according to change mount (/snap/gtk-common-themes/1535/share/gtk2/Materia-compact /snap/leafpad/91/share/themes/Materia-compact none bind,ro 0 0): cannot write to "/snap/gtk-common-themes/1535/share/gtk2/Materia-compact" because it would affect the host in "/snap"
+update.go:85: cannot change mount namespace according to change mount (/snap/gtk-common-themes/1535/share/gtk2/Materia-dark-compact /snap/leafpad/91/share/themes/Materia-dark-compact none bind,ro 0 0): cannot write to "/snap/gtk-common-themes/1535/share/gtk2/Materia-dark-compact" because it would affect the host in "/snap"
+update.go:85: cannot change mount namespace according to change mount (/snap/gtk-common-themes/1535/share/gtk2/Yaru-MATE-dark /snap/leafpad/91/share/themes/Yaru-MATE-dark none bind,ro 0 0): cannot use "/snap/gtk-common-themes/1535/share/gtk2/Yaru-MATE-dark" as bind-mount source: not a directory
+update.go:85: cannot change mount namespace according to change mount (/snap/gtk-common-themes/1535/share/gtk2/Yaru-MATE-light /snap/leafpad/91/share/themes/Yaru-MATE-light none bind,ro 0 0): cannot use "/snap/gtk-common-themes/1535/share/gtk2/Yaru-MATE-light" as bind-mount source: not a directory
+
+
+Nmap testing
+root@DESKTOP-G44B5VV:~# nmap -sT captainmarketingltd.com
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-04-25 13:40 WAT
+Nmap scan report for captainmarketingltd.com (66.29.141.33)
+Host is up (0.31s latency).
+Not shown: 987 filtered tcp ports (no-response)
+PORT    STATE  SERVICE
+20/tcp  closed ftp-data
+21/tcp  open   ftp
+25/tcp  open   smtp
+26/tcp  open   rsftp
+53/tcp  open   domain
+80/tcp  open   http
+110/tcp open   pop3
+143/tcp open   imap
+443/tcp open   https
+465/tcp open   smtps
+587/tcp open   submission
+993/tcp open   imaps
+995/tcp open   pop3s
+
+Nmap done: 1 IP address (1 host up) scanned in 14.86 seconds
+
+Thank you
