@@ -1,0 +1,46 @@
+## Day -1 Task
+
+### Chapter 1 of Linux Basics for Hackers by OccupyTheWeb
+
+****
+Summary
+
+***
+
+Binaries in Linux are stored in `/etc/bin/` and `/etc/sbin/`. `/bin/` are essential command while /sbin/ are for system maintenance
+
+Linux are case sensitivity
+
+Directory are hierachical in Linux
+
+### Kali-linux installation (windows)
+
+[Installation process](https://www.kali.org/docs/wsl/wsl-preparations/#running-kali-wsl)
+
+
+### Filesystem
+
+
+### Command
+
+`pwd`
+
+`cd`
+
+`whoami`
+
+`whereis`
+
+`ps aux`
+
+`find`
+
+### Creating files and directories
+
+`cat > file_name`
+
+`touch filename`
+
+`cat >> file_name` || Add or append to existing file
+
+`mkdir folder_name` || Create a folder
