@@ -1,0 +1,20 @@
+# Jeremiah - Day 02 Submission
+
+
+## Practice using commands
+###less /etc/snort/snort.conf
+### grep -E 'ERROR|WARNING' sample.log`
+### grep ERROR sample.log`
+### tail sample.log`
+### cat snort2.conf | grep MySQL
+
+#Sample output
+### tail sample.log`
+2025-04-27 10:00:01 INFO User john logged in
+2025-04-27 10:05:15 ERROR Failed login for user admin
+2025-04-27 10:06:30 INFO User alice logged in
+2025-04-27 10:07:10 WARNING Disk space low
+2025-04-27 10:10:00 INFO User bob logged in
+
+### grep ERROR sample.log
+2025-04-27 10:05:15 ERROR Failed login for user admin
